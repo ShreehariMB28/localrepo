@@ -76,30 +76,99 @@ a{
   justify-content: space-between;
   display: flex;
 }
+.white{
+  color: white;
+}
 .img1{
   width: 80%;
   margin:40px 0;
 }
-.college  {
-  
-  
+.collimg1  {
+  animation:scrolling2 2s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
   
 }
+
+@keyframes scrolling1 {
+  0%{
+    transform: translateX(600px) scale(0.5);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+}
+.collimg2  {
+  animation:scrolling1 2s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  
+}
+
+@keyframes scrolling2 {
+  0%{
+    transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+.collimg3  {
+  animation:scrolling3 2s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  
+}
+@keyframes scrolling3 {
+  0%{
+    transform: translateX(-600px) scale(0.5);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px) scale(1.);
+    opacity: 1;
+  }
+}
+
 .colltext{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
+  animation: blurIn 1.2s ease-out forwards;
+  text-align: center;
+  font-size: 2.5rem;
   width:50%;
-  margin :20px auto;
+  margin :100px auto;
+}
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.colltext div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .collimg{
   display: flex;
   justify-content: center;
   gap: 4px;
-  margin-bottom: 50px;
+  margin: 100px 0px 0px 20px;
   align-items: center;
 }
-
+.footer{
+  height:500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
 
 
